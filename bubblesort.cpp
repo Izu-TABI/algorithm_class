@@ -19,6 +19,7 @@ int main(void) {
   int sort[N] = {2, 3, 1, 5, 4};
   int tmp;           // tmp: 値を一時的に格納する
   bool flag = false; // 値の交換が行われたかを判断する
+  int comp_index = N;
 
   printf("ソート前: ");
 
@@ -26,14 +27,17 @@ int main(void) {
   print_arr(sort, -1);
   do {
     flag = false;
-    for (int i = 0; i < N - 1; i++) {
+    for (int i = 0; i < comp_index - 1; i++) {
       if (sort[i] > sort[i + 1]) {
         flag = true;
         tmp = sort[i];
         sort[i] = sort[i + 1];
         sort[i + 1] = tmp;
-      }
 
+        if (sort[i] == i + 1 && sort[i + 1] == i + 2) {
+          comp_index = comp_index - 2;
+        }
+      }
       // 配列を表示、カウンタ変数を第二引数に指定
       print_arr(sort, i);
     }
