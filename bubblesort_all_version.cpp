@@ -16,7 +16,7 @@ void print_arr(int arr[], int cnt) {
 }
 
 int main(void) {
-  int sort[N] = {21, 32, 32, 12, 11};
+  int sort[N] = {2, 3, 1, 5, 4};
   int tmp; // tmp: 値を一時的に格納する
   int largest_num_index[2] = {0, 1};
   bool flag = false; // 値の交換が行われたかを判断する
@@ -48,6 +48,8 @@ int main(void) {
     if (sort[comp_index - 2] == sort[largest_num_index[0]] &&
         sort[comp_index - 1] == sort[largest_num_index[1]]) {
       comp_index -= 2;
+    } else if (sort[comp_index - 1] == sort[largest_num_index[1]]) {
+      comp_index -= 1;
     }
     largest_num_index[0] = 0;
     largest_num_index[1] = 1;
