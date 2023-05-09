@@ -35,13 +35,15 @@ int main(void) {
         sort[i] = sort[i + 1];
         sort[i + 1] = tmp;
       }
-
+      // 2番目に小さい値
       if (sort[i] > sort[largest_num_index[0]]) {
         largest_num_index[0] = i;
       }
+      // 1番小さい値
       if (sort[i + 1] > sort[largest_num_index[1]]) {
         largest_num_index[1] = i + 1;
       }
+
       // 配列を表示、カウンタ変数を第二引数に指定
       print_arr(sort, i);
     }
