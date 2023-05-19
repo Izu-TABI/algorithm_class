@@ -44,7 +44,8 @@ void QuickSort(int data[], int left,
   // 左側のグループについて同様の処理を行う
   QuickSort(data, j + 1, right);
   // 右側のグループについて同様の処理を行う
-  //  再起呼出(recursivecall)　どんどん内側に入りグループを分けるこの右側グループと左側グループでソートを繰り返す
+  //  再起呼出(recursive
+  //  call)　どんどん内側に入りグループを分けるこの右側グループと左側グループでソートを繰り返す
 }
 int main(void) {
   int sort[N] = {5, 0, 9, 7, 1, 6, 3, 8, 4, 2};
