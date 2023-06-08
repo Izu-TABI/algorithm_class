@@ -1,11 +1,10 @@
 #include <stdio.h>
 #define N 10 // Nはデータ数
 
-void QuickSort(int data[], int left,
-               int right) // voidは型がなく配列を共有するので戻り値がない
-// data[]は配列名(アドレスを)受け取る=配列の共有
-// leftはグループ左位置(要素番号)を受け取る rightはグループの右位置を受け取る
-{
+void QuickSort(int data[], int left, int right) {
+  // voidは型がなく配列を共有するので戻り値がない
+  // data[]は配列名(アドレスを)受け取る=配列の共有
+  // leftはグループ左位置(要素番号)を受け取る rightはグループの右位置を受け取る
   int pivot; // pivot:軸
   int i, j, k, tmp;
   if (left >= right) {
@@ -48,7 +47,7 @@ void QuickSort(int data[], int left,
   //  call)　どんどん内側に入りグループを分けるこの右側グループと左側グループでソートを繰り返す
 }
 int main(void) {
-  int sort[N] = {5, 0, 9, 7, 1, 6, 3, 8, 4, 2};
+  int sort[N] = {5, 1, 8, 7, 0, 6, 3, 9, 4, 2};
   int i;
   printf("ソート前:");
   for (i = 0; i < N; i++) {
